@@ -23,8 +23,8 @@
 # qt               5.1.1
 # libkeyfinder    0.11.0
 #  |-> boost      1.52.0
-#  \-> fftw        3.3.2
-# libav            0.7.7
+#  \-> fftw        3.3.4
+# libav               11
 # taglib           1.8.0
 #
 # MAC ONLY:
@@ -64,10 +64,11 @@ QMAKE_CXXFLAGS += -D__STDC_CONSTANT_MACROS # for libav
 
 unix|macx{
   LIBS += -L/usr/local/lib -L/usr/lib
-  LIBS += -lkeyfinder
-  LIBS += -lavcodec
-  LIBS += -lavformat
-  LIBS += -lavutil
+  LIBS += -lkeyfinder.0
+  LIBS += -lavcodec.56
+  LIBS += -lavformat.56
+  LIBS += -lavutil.54
+  LIBS += -lavresample.2
   LIBS += -ltag
   LIBS += -lboost_system
   LIBS += -lboost_thread
